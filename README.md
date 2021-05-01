@@ -100,7 +100,7 @@ On trollbox there should be a bot called "bonzibuddy (-)"
 Say -help for a list of commands!
 
 ## Example Code
-``js
+```js
  tb = require('trollbox-bot')
  tb.connect("ExampBot (example!)","blue","example!","Hello World!")
  
@@ -112,7 +112,7 @@ tb.setcommand("helloworld",function(data, socket) {
   socket.send("Hello World!!")
 })
 }
-``
+```
 ## Bots made with this
 None so far that has been noted
 
