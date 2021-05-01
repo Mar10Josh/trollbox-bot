@@ -20,6 +20,7 @@ Connecting your bot
 ```js
 tb.connect("Name","Color","Prefix","Welcome message")
 ```
+
 onconnect, all further commands **MUST** be inside this function
 ```js
 tb.onconnect = function(socket) {
@@ -98,6 +99,20 @@ On trollbox there should be a bot called "bonzibuddy (-)"
 
 Say -help for a list of commands!
 
+## Example Code
+``js
+ tb = require('trollbox-bot')
+ tb.connect("ExampBot (example!)","blue","example!","Hello World!")
+ 
+ tb.onconnect = function(socket) {
+  tb.setcommand("help",function(data, socket) {
+  socket.send("say example!helloworld")
+})
+tb.setcommand("helloworld",function(data, socket) {
+  socket.send("Hello World!!")
+})
+}
+``
 ## Bots made with this
 None so far that has been noted
 
